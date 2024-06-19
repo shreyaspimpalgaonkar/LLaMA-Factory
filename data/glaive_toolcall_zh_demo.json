@@ -3,27 +3,6 @@
     "conversations": [
       {
         "from": "human",
-        "value": "我需要为John Doe生成一张发票。他购买了2个苹果，每个$1，以及3根香蕉，每根$0.5。"
-      },
-      {
-        "from": "function_call",
-        "value": "{\"name\": \"generate_invoice\", \"arguments\": {\"customer_name\": \"约翰·多伊\", \"items\": [{\"name\": \"苹果\", \"quantity\": 2, \"price\": 1}, {\"name\": \"香蕉\", \"quantity\": 3, \"price\": 0.5}]}}"
-      },
-      {
-        "from": "observation",
-        "value": "{\"invoice_id\": \"INV12345\", \"customer_name\": \"约翰·多伊\", \"items\": [{\"name\": \"苹果\", \"quantity\": 2, \"price\": 1, \"total\": 2}, {\"name\": \"香蕉\", \"quantity\": 3, \"price\": 0.5, \"total\": 1.5}], \"total\": 3.5, \"status\": \"生成\"}"
-      },
-      {
-        "from": "gpt",
-        "value": "发票已成功生成。发票编号为INV12345。约翰·多伊的总金额为$3.5。发票包含2个苹果，总金额为$2，以及3根香蕉，总金额为$1.5。"
-      }
-    ],
-    "tools": "[{\"name\": \"generate_invoice\", \"description\": \"生成发票\", \"parameters\": {\"type\": \"object\", \"properties\": {\"customer_name\": {\"type\": \"string\", \"description\": \"客户名称\"}, \"items\": {\"type\": \"array\", \"items\": {\"type\": \"object\", \"properties\": {\"name\": {\"type\": \"string\", \"description\": \"The item name\"}, \"quantity\": {\"type\": \"integer\", \"description\": \"The quantity of the item\"}, \"price\": {\"type\": \"number\", \"description\": \"The price per unit\"}}, \"required\": [\"name\", \"quantity\", \"price\"]}}}, \"required\": [\"customer_name\", \"items\"]}}, {\"name\": \"generate_password\", \"description\": \"生成随机密码\", \"parameters\": {\"type\": \"object\", \"properties\": {\"length\": {\"type\": \"integer\", \"description\": \"密码的长度\"}}, \"required\": [\"length\"]}}]"
-  },
-  {
-    "conversations": [
-      {
-        "from": "human",
         "value": "假设你有一个需要随机数的Java程序，范围在0到10之间。你可以使用什么代码片段来生成这样的数字？\n\n下面是一个示例代码片段，它使用Math.random()方法来生成一个在0到1之间的随机数，然后缩放并四舍五入结果，得到一个在0到10之间的随机数：\n\n```java\nint randomNumber = (int) (Math.random() * 11);\n```\n\n在Java中是否有更有效的方法来生成随机数？你会如何修改代码以生成具有不同范围或分布的随机数？"
       },
       {
@@ -40,6 +19,27 @@
       }
     ],
     "tools": "[]"
+  },
+  {
+    "conversations": [
+      {
+        "from": "human",
+        "value": "我需要为John Doe生成一张发票。他购买了2个苹果，每个$1，以及3根香蕉，每根$0.5。"
+      },
+      {
+        "from": "function_call",
+        "value": "{\"name\": \"generate_invoice\", \"arguments\": {\"customer_name\": \"约翰·多伊\", \"items\": [{\"name\": \"苹果\", \"quantity\": 2, \"price\": 1}, {\"name\": \"香蕉\", \"quantity\": 3, \"price\": 0.5}]}}"
+      },
+      {
+        "from": "observation",
+        "value": "{\"invoice_id\": \"INV12345\", \"customer_name\": \"约翰·多伊\", \"items\": [{\"name\": \"苹果\", \"quantity\": 2, \"price\": 1, \"total\": 2}, {\"name\": \"香蕉\", \"quantity\": 3, \"price\": 0.5, \"total\": 1.5}], \"total\": 3.5, \"status\": \"生成\"}"
+      },
+      {
+        "from": "gpt",
+        "value": "发票已成功生成。发票编号为INV12345。约翰·多伊的总金额为$3.5。发票包含2个苹果，总金额为$2，以及3根香蕉，总金额为$1.5。"
+      }
+    ],
+    "tools": "[{\"name\": \"generate_invoice\", \"description\": \"生成发票\", \"parameters\": {\"type\": \"object\", \"properties\": {\"customer_name\": {\"type\": \"string\", \"description\": \"客户名称\"}, \"items\": {\"type\": \"array\", \"items\": {\"type\": \"object\", \"properties\": {\"name\": {\"type\": \"string\", \"description\": \"The item name\"}, \"quantity\": {\"type\": \"integer\", \"description\": \"The quantity of the item\"}, \"price\": {\"type\": \"number\", \"description\": \"The price per unit\"}}, \"required\": [\"name\", \"quantity\", \"price\"]}}}, \"required\": [\"customer_name\", \"items\"]}}, {\"name\": \"generate_password\", \"description\": \"生成随机密码\", \"parameters\": {\"type\": \"object\", \"properties\": {\"length\": {\"type\": \"integer\", \"description\": \"密码的长度\"}}, \"required\": [\"length\"]}}]"
   },
   {
     "conversations": [

@@ -54,7 +54,7 @@ class DataArguments:
         metadata={"help": "Whether to disable the mask on the prompt or not."},
     )
     streaming: bool = field(
-        default=False,
+        default=True,
         metadata={"help": "Enable dataset streaming."},
     )
     buffer_size: int = field(
@@ -62,7 +62,7 @@ class DataArguments:
         metadata={"help": "Size of the buffer to randomly sample examples from in dataset streaming."},
     )
     mix_strategy: Literal["concat", "interleave_under", "interleave_over"] = field(
-        default="concat",
+        default="interleave_under",
         metadata={"help": "Strategy to use in dataset mixing (concat/interleave) (undersampling/oversampling)."},
     )
     interleave_probs: Optional[str] = field(

@@ -5,6 +5,21 @@
   "alpaca_en_demo": {
     "file_name": "alpaca_en_demo.json"
   },
+  "triples_dataset_10k":{
+	  "file_name":"triples_dataset_10k.json"
+  },
+  "triples_dataset":{
+	  "file_name":"triples_dataset.json"
+  },
+  "triples_dataset_eval":{
+	  "file_name":"triples_eval_ds.json"
+  },
+  "triples_dataset_all":{
+	  "file_name":"triples_dataset_all"
+  },
+  "triples_dataset_combined":{
+	  "file_name":"triples_dataset_combined"
+  },
   "alpaca_zh_demo": {
     "file_name": "alpaca_zh_demo.json"
   },
@@ -251,17 +266,6 @@
   "neo_sft": {
     "hf_hub_url": "m-a-p/neo_sft_phase2",
     "formatting": "sharegpt"
-  },
-  "magpie_pro_300k": {
-    "hf_hub_url": "Magpie-Align/Magpie-Pro-300K-Filtered",
-    "formatting": "sharegpt"
-  },
-  "web_instruct": {
-    "hf_hub_url": "TIGER-Lab/WebInstructSub",
-    "columns": {
-      "prompt": "question",
-      "response": "answer"
-    }
   },
   "llava_1k_en": {
     "hf_hub_url": "BUAADreamer/llava-en-zh-2k",
@@ -535,13 +539,13 @@
       "prompt": "text"
     }
   },
-  "fineweb": {
+  "fileweb": {
     "hf_hub_url": "HuggingFaceFW/fineweb",
     "columns": {
       "prompt": "text"
     }
   },
-  "fineweb_edu": {
+  "fileweb_edu": {
     "hf_hub_url": "HuggingFaceFW/fineweb-edu",
     "columns": {
       "prompt": "text"
